@@ -1,5 +1,6 @@
 import os
 
+
 def formulate_cnf_clauses(grid):
     """
     This function takes an input Suduko grid and will output a list of disjunctive clauses
@@ -32,6 +33,7 @@ def generate_row_clauses():
 
     return clauses
 
+
 def generate_column_clauses():
     """
     This function generates all the CNF clauses for the constraints of each column
@@ -53,6 +55,7 @@ def generate_column_clauses():
 
     return clauses
 
+
 def generate_box_clauses():
     """
     This function generates all the CNF clauses for the constraints of each 3 by 3 box
@@ -73,6 +76,7 @@ def generate_box_clauses():
                         clauses.append([-get_box_variable(j, k, i), -get_box_variable(j, l, i)])
     
     return clauses
+
 
 def generate_initial_assignment_clauses(grid):
     """
@@ -110,6 +114,7 @@ def generate_single_assignment_clauses():
                     clauses.append([-get_variable(i, j, k), -get_variable(i, j, l)])
 
     return clauses
+
 
 def get_box_variable(box_num, index_in_box, number):
     """
@@ -155,6 +160,7 @@ def get_row_col_num(variable):
     row = variable
 
     return row, column, number
+
 
 if __name__ == "__main__":
     # Sample grid
