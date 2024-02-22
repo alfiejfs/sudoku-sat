@@ -186,6 +186,7 @@ if __name__ == "__main__":
 
     if not os.path.exists("input.txt"):
         print("No input to check. Exiting.")
+        exit()
 
     """
     Format of input is the solution copied from https://msoos.github.io/cryptominisat_web/.
